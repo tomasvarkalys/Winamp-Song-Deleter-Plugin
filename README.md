@@ -16,11 +16,11 @@ Winamp-Song-Deleter-Plugin/
 │   ├── gen.h                   # General purpose plugin interface ✓
 │   ├── wa_ipc.h                # IPC communication ✓
 │   ├── ipc_pe.h                # Playlist editor IPC ✓
-│   ├── DSP.H                   # (kept for future features)
-│   ├── IN2.H                   # (kept for future features)
-│   ├── OUT.H                   # (kept for future features)
-│   ├── wa_dlg.h                # (kept for future features)
-│   └── wa_hotkeys.h            # (kept for future features)
+│   ├── DSP.H                   # (not used in the code, but kept for future features)
+│   ├── IN2.H                   # (not used in the code, but kept for future features)
+│   ├── OUT.H                   # (not used in the code, but kept for future features)
+│   ├── wa_dlg.h                # (not used in the code, but kept for future features)
+│   └── wa_hotkeys.h            # (not used in the code, but kept for future features)
 ├── CMakeLists.txt              # Clean build configuration
 ├── .gitignore                  # Excludes build dirs & IDE files
 └── README.md                   # This file
@@ -31,7 +31,7 @@ Winamp-Song-Deleter-Plugin/
 - ✅ **System tray icon** with tooltip "Delete current song"
 - ✅ **Left-click**: Deletes current song to Recycle Bin + removes from playlist
 - ✅ **Respects shuffle/repeat** settings when playing next track
-- ✅ **Long path support** (up to 32,767 characters) - works like Windows Explorer
+- ✅ **Long path support** (up to 32,767 characters)
 - ✅ **100% recoverable** - all deletions go to Recycle Bin
 - ✅ **Safe error handling** - graceful failures, no crashes
 - ✅ **Minimal code** - only 164 lines, clean and efficient
@@ -40,7 +40,7 @@ Winamp-Song-Deleter-Plugin/
 
 - **Unicode Shell API** (`SHFileOperationW`) for long path support
 - **Proper file handle release** (moves to next track first, then deletes)
-- **Forum-proven playlist removal** using `IPC_PE_DELETEINDEX`
+- **Proven playlist item removal** using `IPC_PE_DELETEINDEX`
 - **Modern CMake build** system
 - **Clean dependencies** - only essential Windows APIs
 
@@ -74,5 +74,3 @@ Winamp-Song-Deleter-Plugin/
 
 - Generates `gen_WinampSongDeleter.dll` 
 - Copy to Winamp's `Plugins/` folder to use
-
-The plugin is now **production-ready** and handles all edge cases perfectly! 🎵🗑️
