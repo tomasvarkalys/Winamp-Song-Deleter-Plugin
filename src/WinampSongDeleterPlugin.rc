@@ -1,0 +1,4 @@
+#include "resource.h"
+#include "winres.h"
+
+IDI_TRAYICON ICON "../resources/x_icon.ico"
